@@ -35,7 +35,7 @@ class AsyncSession(Session):
             socket_pool: SocketpoolModuleType,
             ssl_context: Optional[SSLContextType] = None,
     ) -> None:
-        Session.__init__(socket_pool, ssl_context)
+        Session(socket_pool, ssl_context)
 
         #FIXME Alex Herrmann: Don't know why the below are required to make TOX work
         self._socket_pool = socket_pool
